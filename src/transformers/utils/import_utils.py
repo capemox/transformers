@@ -216,6 +216,7 @@ _liger_kernel_available = _is_package_available("liger_kernel")
 _triton_available = _is_package_available("triton")
 _spqr_available = _is_package_available("spqr_quant")
 _rich_available = _is_package_available("rich")
+_xformers_available = _is_package_available("xformers")
 
 _torch_version = "N/A"
 _torch_available = False
@@ -1391,6 +1392,10 @@ def is_triton_available():
 
 def is_rich_available():
     return _rich_available
+
+
+def is_xformers_available():
+    return _xformers_available
 
 
 # docstyle-ignore

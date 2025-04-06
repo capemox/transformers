@@ -192,6 +192,7 @@ from . import (
     mvp,
     myt5,
     nemotron,
+    neobert,
     nllb,
     nllb_moe,
     nougat,

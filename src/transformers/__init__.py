@@ -659,6 +659,7 @@ _import_structure = {
     "models.mvp": ["MvpConfig", "MvpTokenizer"],
     "models.myt5": ["MyT5Tokenizer"],
     "models.nemotron": ["NemotronConfig"],
+    "models.neobert": ["NeoBertConfig"],
     "models.nllb": [],
     "models.nllb_moe": ["NllbMoeConfig"],
     "models.nougat": ["NougatProcessor"],
@@ -3172,6 +3173,14 @@ else:
             "NemotronForTokenClassification",
             "NemotronModel",
             "NemotronPreTrainedModel",
+        ]
+    )
+    _import_structure["models.neobert"].extend(
+        [
+            "NeoBertForMaskedLM",
+            "NeoBertForSequenceClassification",
+            "NeoBertModel",
+            "NeoBertPreTrainedModel",
         ]
     )
     _import_structure["models.nllb_moe"].extend(
@@ -5934,6 +5943,7 @@ if TYPE_CHECKING:
     from .models.mvp import MvpConfig, MvpTokenizer
     from .models.myt5 import MyT5Tokenizer
     from .models.nemotron import NemotronConfig
+    from .models.neobert import NeoBertConfig
     from .models.nllb_moe import NllbMoeConfig
     from .models.nougat import NougatProcessor
     from .models.nystromformer import (
@@ -8118,6 +8128,12 @@ if TYPE_CHECKING:
             NemotronForTokenClassification,
             NemotronModel,
             NemotronPreTrainedModel,
+        )
+        from .models.neobert import (
+            NeoBertForMaskedLM,
+            NeoBertForSequenceClassification,
+            NeoBertModel,
+            NeoBertPreTrainedModel,
         )
         from .models.nllb_moe import (
             NllbMoeForConditionalGeneration,
